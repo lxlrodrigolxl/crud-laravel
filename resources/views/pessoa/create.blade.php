@@ -1,9 +1,9 @@
 <h1> formulario de pessoa: </h1>
 <form action="/pessoas" method="POST">
     @csrf
-    <input type="text" name="nome">
-    <input type="text" name="telefone">
-    <input type="text" name="email" >
+    <input type="text" name="nome" required>
+    <input type="text" name="telefone" required>
+    <input type="text" name="email" required>
     <button type="submit">Salvar</button>
 </form>
 
