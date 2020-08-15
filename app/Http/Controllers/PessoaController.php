@@ -19,7 +19,7 @@ class PessoaController extends Controller
     {
         return view('pessoa.create');
     }
-    
+
     public function store(Request $request)
     {
         // $pessoa = new \App\Pessoa();
@@ -36,5 +36,16 @@ class PessoaController extends Controller
 
     }
 
+    public function edit(Pessoa $pessoa)
+    {
+        return view('pessoa.create' , compact('pessoa'));
+    }
+    
+    public function update(Request $request, Pessoa $pessoa)
+    {
+        $pessoa->update($request->all());
+
+        return redirect('/pessoas');
+    }
 
 }
